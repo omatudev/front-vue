@@ -1,0 +1,70 @@
+{
+  "name": "front-vue-ts",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Vue 3 + TypeScript template with Hexagonal Architecture, Pinia, Axios, and Husky git hooks",
+  "keywords": [
+    "vue3",
+    "typescript",
+    "hexagonal-architecture",
+    "pinia",
+    "axios",
+    "vite",
+    "template"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/front-vue-ts.git"
+  },
+  "engines": {
+    "node": "22.20.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "bun run type-check && bun run build-only",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
+    "lint:eslint": "eslint . --fix",
+    "lint": "bun run lint:oxlint && bun run lint:eslint",
+    "format": "prettier --write src/",
+    "prepare": "husky",
+    "clean": "rm -rf dist node_modules .turbo",
+    "reset": "bun run clean && bun install"
+  },
+  "dependencies": {
+    "axios": "1.12.2",
+    "pinia": "3.0.3",
+    "vue": "3.5.22",
+    "vue-router": "4.5.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "20.1.0",
+    "@commitlint/config-conventional": "20.0.0",
+    "@prettier/plugin-oxc": "0.0.4",
+    "@tailwindcss/vite": "4.1.14",
+    "@tsconfig/node22": "22.0.2",
+    "@types/node": "22.18.10",
+    "@vitejs/plugin-vue": "6.0.1",
+    "@vue/eslint-config-prettier": "10.2.0",
+    "@vue/eslint-config-typescript": "14.6.0",
+    "@vue/tsconfig": "0.8.1",
+    "eslint": "9.33.0",
+    "eslint-plugin-oxlint": "1.22.0",
+    "eslint-plugin-vue": "10.4.0",
+    "husky": "9.1.7",
+    "lint-staged": "16.2.4",
+    "oxlint": "1.22.0",
+    "prettier": "3.6.2",
+    "prettier-plugin-tailwindcss": "0.6.14",
+    "tailwindcss": "4.1.14",
+    "typescript": "5.9.3",
+    "vite": "npm:rolldown-vite@latest",
+    "vite-plugin-vue-devtools": "8.0.2",
+    "vue-tsc": "3.1.0"
+  }
+}

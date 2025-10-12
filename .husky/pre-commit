@@ -1,0 +1,2 @@
+# Ejecutar lint-staged (prettier + eslint)
+bunx lint-staged

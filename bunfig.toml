@@ -1,0 +1,10 @@
+[install]
+# Configuración de instalación de paquetes
+registry = "https://registry.npmjs.org/"
+cache = true
+cacheDir = ".bun-cache"
+
+[test]
+# Configuración para pruebas con Bun
+preload = ["./src/main.ts"]
+

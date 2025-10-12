@@ -1,0 +1,2 @@
+# Validar Conventional Commits
+bunx --no -- commitlint --edit "$1"
