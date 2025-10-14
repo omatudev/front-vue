@@ -38,7 +38,10 @@
   },
   "dependencies": {
     "axios": "1.12.2",
+    "mammoth": "1.11.0",
+    "pdfmake": "0.2.20",
     "pinia": "3.0.3",
+    "uuid": "13.0.0",
     "vue": "3.5.22",
     "vue-router": "4.5.1"
   },
@@ -49,6 +52,8 @@
     "@tailwindcss/vite": "4.1.14",
     "@tsconfig/node22": "22.0.2",
     "@types/node": "22.18.10",
+    "@types/pdfmake": "0.2.11",
+    "@types/uuid": "^11.0.0",
     "@vitejs/plugin-vue": "6.0.1",
     "@vue/eslint-config-prettier": "10.2.0",
     "@vue/eslint-config-typescript": "14.6.0",
