@@ -201,7 +201,7 @@ Tu salida debe ser un objeto JSON válido con la siguiente estructura exacta. No
 
 Estructura esperada:
 {
-  "objective": "Los alumnos de [grupo/taller] desarrollarán/pondrán en práctica [competencia específica] a través de [metodología concreta y detallada].",
+  "objective": "[Sujeto: Los docentes/alumnos de la escuela/institución] [Verbo en infinitivo: conocer/desarrollar/aplicar] [Competencia específica] a través de [Metodología concreta].",
   "topic": "Nombre del tema principal",
   "activities": {
     "start": {
@@ -231,9 +231,11 @@ REGLAS CRÍTICAS PARA GENERAR CONTENIDO NATURAL:
 
 1. OBJETIVO:
    - Debe ser ESPECÍFICO, CLARO y COMPLETO
-   - Usar verbos de acción pedagógicos (desarrollarán, pondrán en práctica, aplicarán, analizarán)
-   - Formato: "Los alumnos de [contexto detallado] [verbo acción] [competencia específica] a través de [metodología concreta]"
-   - Ejemplo: "Los alumnos del taller de Orfebrería pondrán en práctica el trabajo colaborativo a través de actividades dinámicas que fomenten la comunicación y organización grupal"
+   - Estructura obligatoria: "[Sujeto completo] [Verbo en infinitivo] [Competencia específica] a través de [Metodología concreta]"
+   - El sujeto debe incluir la institución/escuela: "Los docentes de la escuela...", "Los alumnos del taller..."
+   - Usar verbos en INFINITIVO (conocer, desarrollar, aplicar, analizar, comprender)
+   - Ejemplo correcto: "Los docentes de la escuela de Artes y Oficios deberán conocer qué es capacitación para el trabajo a través de actividades recreativas"
+   - Ejemplo correcto: "Los alumnos del taller de Orfebrería aplicarán técnicas de trabajo colaborativo a través de dinámicas que fomenten la comunicación grupal"
 
 2. ESTILO DE ESCRITURA - MUY IMPORTANTE:
    - ✅ Escribe como NARRATIVA continua, no como lista numerada
@@ -247,15 +249,15 @@ REGLAS CRÍTICAS PARA GENERAR CONTENIDO NATURAL:
 3. INICIO (8-15 min):
    - Dinámica ROMPE HIELO o diagnóstica
    - Escribe 2-3 párrafos cortos y fluidos
-   - Especifica formación de equipos con números exactos (binas, equipos de 3, equipos de 4)
+   - Menciona la formación de equipos SIN especificar números exactos (ejemplo: "se formarán en equipos", NO "equipos de 4")
    - Describe la dinámica de forma clara y específica
    - Menciona el tiempo límite si aplica
    - Integra el objetivo/reto naturalmente
-   - Ejemplo de buena estructura: "Para comenzar, se formarán en binas. A cada equipo se le entregará [material] donde deberán [acción específica]. Tendrán un tiempo límite de [X minutos]. El reto es que los integrantes [objetivo de la actividad]."
+   - Ejemplo de buena estructura: "Para comenzar, se formarán en equipos. A cada equipo se le entregará [material] donde deberán [acción específica]. Tendrán un tiempo límite de [X minutos]. El reto es que los integrantes [objetivo de la actividad]."
 
 4. DESARROLLO (20-35 min):
    - Inicia con: "Se realizará una breve presentación de [X] minutos sobre [tema] y sus características"
-   - Luego menciona formación de equipos
+   - Luego menciona formación de equipos SIN números específicos
    - Describe una DINÁMICA CREATIVA Y ORIGINAL (no genérica)
    - ✅ BUENAS dinámicas: plumón con hilos, torre de espagueti y malvaviscos, escape room educativo, desafío de construcción colaborativa
    - ❌ EVITA dinámicas comunes: armar rompecabezas, resolver caso, debate simple
@@ -272,7 +274,8 @@ REGLAS CRÍTICAS PARA GENERAR CONTENIDO NATURAL:
    - Ejemplo: "Se llevará a cabo un juego digital interactivo en el que los alumnos deberán responder preguntas relacionadas con el tema. Esta actividad servirá como herramienta para evaluar su nivel de comprensión."
 
 6. EVALUACIÓN (5-10 min):
-   - ¡MUY IMPORTANTE! Debe ser BREVE y SIMPLE (1-2 líneas máximo)
+   - ¡MUY IMPORTANTE! La evaluación es OPCIONAL dependiendo del tema
+   - Si se incluye, debe ser BREVE y SIMPLE (1-2 líneas máximo)
    - ❌ NO uses estructuras complejas con porcentajes y criterios detallados
    - ✅ Escribe de forma directa y natural
    - Ejemplos correctos:
@@ -281,6 +284,7 @@ REGLAS CRÍTICAS PARA GENERAR CONTENIDO NATURAL:
      * "Los estudiantes escribirán una reflexión breve sobre lo aprendido"
      * "Se realizará una evaluación entre pares sobre el desempeño colaborativo"
    - ❌ EVITA: "1. INSTRUMENTO DE EVALUACIÓN: Rúbrica. 2. CRITERIOS: Participación 30%..."
+   - Si el tema no requiere evaluación formal, se puede omitir esta sección
 
 7. MATERIALES:
    - Ser específico pero natural
@@ -289,11 +293,11 @@ REGLAS CRÍTICAS PARA GENERAR CONTENIDO NATURAL:
    - Listar entre 2-5 materiales por actividad
 
 8. TIEMPOS:
-   - Total debe sumar 45-60 minutos
+   - Total debe sumar 45-60 minutos (sin contar evaluación si es opcional)
    - INICIO: 8-15 min
    - DESARROLLO: 20-35 min
    - FINAL: 8-15 min
-   - EVALUACIÓN: 5-10 min
+   - EVALUACIÓN: 5-10 min (opcional)
 
 9. CREATIVIDAD EN LAS DINÁMICAS:
    - Cada trabajo colaborativo debe tener dinámicas ORIGINALES y ESPECÍFICAS

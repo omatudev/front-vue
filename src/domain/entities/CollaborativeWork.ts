@@ -30,6 +30,7 @@ export interface ActivitySection {
  */
 export interface GenerateCollaborativeWorkDTO {
   teacherName: string
+  school: string
   topic: string
   subject: string
   gradeLevel: string

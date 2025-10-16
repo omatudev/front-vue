@@ -134,6 +134,7 @@ function buildUserPrompt(request: GenerateCollaborativeWorkDTO): string {
   let prompt = `Genera un plan de trabajo colaborativo con las siguientes especificaciones:
 
 Maestro: ${request.teacherName}
+Escuela: ${request.school}
 Tema: ${request.topic}
 Materia: ${request.subject}
 Nivel educativo: ${request.gradeLevel}`

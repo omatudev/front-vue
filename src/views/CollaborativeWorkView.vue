@@ -11,6 +11,7 @@ const { loading, error, currentWork, generateWithAI, downloadPDF, clear } = useC
 
 const form = reactive<GenerateCollaborativeWorkDTO>({
   teacherName: '',
+  school: '',
   topic: '',
   subject: '',
   gradeLevel: '',
@@ -46,6 +47,7 @@ function handleClear() {
   clear()
   Object.assign(form, {
     teacherName: '',
+    school: '',
     topic: '',
     subject: '',
     gradeLevel: '',
@@ -72,6 +74,14 @@ function handleClear() {
           v-model="form.teacherName"
           label="Nombre del Maestro *"
           placeholder="Ej: Oscar Aldair Matu Miranda"
+          required
+        />
+
+        <GlassInput
+          id="school"
+          v-model="form.school"
+          label="Escuela *"
+          placeholder="Ej: Escuela de Artes y Oficios"
           required
         />
 
