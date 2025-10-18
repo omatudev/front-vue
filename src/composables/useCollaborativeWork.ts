@@ -2,10 +2,12 @@ import { ref, computed } from 'vue'
 import type {
   CollaborativeWork,
   GenerateCollaborativeWorkDTO,
+  AIWorkshopResponse,
 } from '@/domain/entities/CollaborativeWork'
 import { generateCollaborativeWorkPDF } from '@/utils/pdfMake/collaborativeWorkPDF'
 import { COLLABORATIVE_WORK_SYSTEM_PROMPT, PROMPT_AI_CONFIG, API_URLS } from '@/config/prompts'
 import { v4 as uuidv4 } from 'uuid'
+import { Language } from '@/utils/enums/Language'
 
 /**
  * Composable para gestionar trabajos colaborativos
@@ -60,15 +62,19 @@ export function useCollaborativeWork() {
       }
 
       // Parsear la respuesta JSON
-      const parsedData = parseAIResponse(content)
+      const parsedData: AIWorkshopResponse = parseAIResponse(content)
 
       // Crear el objeto CollaborativeWork completo
       const work: CollaborativeWork = {
         id: uuidv4(),
-        objective: parsedData.objective,
-        topic: parsedData.topic,
         teacherName: request.teacherName,
-        activities: parsedData.activities,
+        workshopName: request.workshopName,
+        objective: request.objective,
+        duration: request.duration,
+        start: parsedData.start,
+        development: parsedData.development,
+        closure: parsedData.closure,
+        evaluation: parsedData.evaluation,
         createdAt: new Date(),
       }
 
@@ -88,11 +94,7 @@ export function useCollaborativeWork() {
    */
   async function downloadPDF(work?: CollaborativeWork): Promise<void> {
     const workToExport = work || currentWork.value
-
-    if (!workToExport) {
-      throw new Error('No hay trabajo colaborativo para exportar')
-    }
-
+    if (!workToExport) throw new Error('No hay trabajo colaborativo para exportar')
     try {
       loading.value = true
       error.value = null
@@ -129,30 +131,20 @@ export function useCollaborativeWork() {
 
 /**
  * Construye el prompt del usuario basado en los parámetros del maestro
+ * Adaptado para talleres docentes con necesidades educativas
  */
 function buildUserPrompt(request: GenerateCollaborativeWorkDTO): string {
-  let prompt = `Genera un plan de trabajo colaborativo con las siguientes especificaciones:
-
-Maestro: ${request.teacherName}
-Escuela: ${request.school}
-Tema: ${request.topic}
-Materia: ${request.subject}
-Nivel educativo: ${request.gradeLevel}`
-
-  if (request.numberOfStudents) {
-    prompt += `\nNúmero aproximado de estudiantes: ${request.numberOfStudents}`
+  let prompt = `Genera un plan de taller docente con las siguientes especificaciones:`
+  if (request.workshopName) {
+    prompt += `\nTaller: ${request.workshopName}`
   }
-
+  if (request.objective) {
+    prompt += `\nObjetivo: ${request.objective}`
+  }
   if (request.duration) {
     prompt += `\nDuración total deseada: ${request.duration} minutos`
   }
-
-  if (request.additionalRequirements) {
-    prompt += `\nRequerimientos adicionales: ${request.additionalRequirements}`
-  }
-
-  prompt +=
-    '\n\nGenera un plan completo que fomente la colaboración, comunicación y trabajo en equipo.'
+  prompt += `Idioma: ${Language.ESPANOL_MEXICO}`
 
   return prompt
 }
@@ -160,11 +152,7 @@ Nivel educativo: ${request.gradeLevel}`
 /**
  * Parsea la respuesta del modelo de IA
  */
-function parseAIResponse(content: string): {
-  objective: string
-  topic: string
-  activities: CollaborativeWork['activities']
-} {
+function parseAIResponse(content: string): AIWorkshopResponse {
   // Limpiar la respuesta de posibles bloques de código
   let cleaned = content.trim()
 

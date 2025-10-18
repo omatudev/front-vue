@@ -5,7 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import IconName from '@/utils/enums/IconName'
 import iconsDataJson from '@/assets/icon.json'
 
 const props = defineProps({
@@ -19,13 +18,14 @@ interface IIconData {
   paths: string[]
 }
 
-const iconsData = iconsDataJson as Record<IconName, IIconData>
+const iconsData = iconsDataJson as Record<string, IIconData>
 
-function getIconData(iconName: IconName): IIconData {
+function getIconData(iconName: string): IIconData {
   if (iconsData[iconName]) return iconsData[iconName]
   console.error(`icon '${iconName}' not found`)
-  return iconsData[IconName.warning]
+  // Fallback to doc icon
+  return iconsData['doc']!
 }
 
-const icon = getIconData(props.name as IconName)
+const icon = getIconData(props.name)
 </script>

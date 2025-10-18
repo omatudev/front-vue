@@ -40,7 +40,7 @@ const value = computed({
       :placeholder="placeholder"
       :required="required"
       :min="min"
-      class="w-full rounded-lg border border-white/30 bg-white/20 p-3 shadow-lg shadow-black/10 backdrop-blur-md transition-all duration-200 placeholder:text-gray-400 focus:border-white/50 focus:bg-white/30 focus:outline-none"
+      class="bg-primary-700 placeholder:text-primary-300 focus:outline-primary-100 w-full rounded-xl p-3 transition-all duration-300 focus:outline"
     />
   </p>
 </template>
