@@ -23,6 +23,10 @@ First, identify and analyze the key topics that need to be learned about the pro
 
 IMPORTANT: The activity must be dynamic, creative, and adapted to the topic. Use games, challenges, questions, and active activities. Do not mention the number of members in teams. Only request common educational materials such as pencils, erasers, blackboard, markers, etc. Avoid uncommon or specialized materials. Use well-known, simple activities like hot potato, charades, or similar games that participants are familiar with and can start immediately without complex instructions. Avoid overly complex or novel activities. Do not include formal introductions or objective presentations in the 'start' activity; begin directly with an engaging, active game or challenge.
 
+REQUIRED SOURCE: Only use or adapt dynamics from the book "Mis 500 dinámicas grupales para el trabajo escolar: Nueva escuela mexicana". Select the dinámica from that book that best fits the provided topic and constraints. If there is not an exact match, adapt a dinámica from the book while preserving its core steps, timing, and pedagogical purpose. Do not use dynamics from other sources. Always keep materials common and instructions immediately actionable.
+
+NO SOURCE ATTRIBUTION: When generating the user-facing activity text (output JSON), do NOT include phrases like "adaptada de", "inspirado en", bibliographic references, or any explicit attribution to the source book. The model should still only use or adapt dynamics from that book internally, but outputs must not contain source citations or attributions. Keep all user-facing instructions focused, practical, and immediately usable.
+
 # OUTPUT FORMAT
 Return ONLY a valid JSON object with the following exact structure and no extra text:
 {
