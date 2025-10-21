@@ -14,7 +14,7 @@ const form = reactive({
   teacherName: teacherStore.name,
   workshopName: '',
   objective: '',
-  duration: 53,
+  duration: 50,
 })
 
 watch(
