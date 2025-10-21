@@ -134,17 +134,17 @@ export function useCollaborativeWork() {
  * Adaptado para talleres docentes con necesidades educativas
  */
 function buildUserPrompt(request: GenerateCollaborativeWorkDTO): string {
-  let prompt = `Genera un plan de taller docente con las siguientes especificaciones:`
+  let prompt = `Generate a teacher workshop plan with the following specifications:`
   if (request.workshopName) {
-    prompt += `\nTaller: ${request.workshopName}`
+    prompt += `\nWorkshop: ${request.workshopName}`
   }
   if (request.objective) {
-    prompt += `\nObjetivo: ${request.objective}`
+    prompt += `\nObjective: ${request.objective}`
   }
   if (request.duration) {
-    prompt += `\nDuración total deseada: ${request.duration} minutos`
+    prompt += `\nTotal desired duration: ${request.duration} minutes`
   }
-  prompt += `Idioma: ${Language.ESPANOL_MEXICO}`
+  prompt += `\nLanguage respon: ${Language.ESPANOL_MEXICO}`
 
   return prompt
 }

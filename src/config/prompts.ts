@@ -26,25 +26,59 @@ Follow these steps in order:
    - Consider cultural and educational context of Mexican schools
 
 2. DYNAMICS SELECTION:
+   REFERENCE_DYNAMICS = [
+     // Presentación y rompehielos
+     "El ovillo de lana",          // Lanzar ovillo diciendo nombre/interés
+     "El espejo",                  // Imitación en parejas
+     "La telaraña de intereses",   // Red de conexiones grupales
+     "Caminata de presentación",   // Encuentros con respuestas rápidas
+     
+     // Comunicación y trabajo en equipo
+     "Teléfono cooperativo",       // Reconstrucción grupal de mensaje
+     "Construcción ciega",         // Guía verbal para construcción
+     "Dibujo a distancia",         // Descripción y dibujo sin ver
+     "Mapa humano",                // Representación espacial de conceptos
+     
+     // Agilidad mental y movimiento
+     "Carrera de relevos conceptuales", // Competencia de ejemplos
+     "Atrápalo si sabes",              // Preguntas con pelota
+     "La palabra prohibida",            // Explicación sin palabra clave
+     "Circuito de estaciones",          // Mini-actividades por rincones
+     
+     // Dramatización y creatividad
+     "Escenificación de conceptos",     // Mímica o actuación grupal
+     "El noticiero educativo",          // Presentación tipo noticiero
+     "Publicidad educativa",            // Comercial del concepto
+     "Historias encadenadas",           // Narración colectiva
+     
+     // Atención y observación
+     "Cambio rápido",                   // Movimiento por categorías
+     "Detectives del error",            // Identificación de errores
+     "Encuentra al igual",              // Parejas conceptuales
+     
+     // Desarrollo socioemocional
+     "Café con pan",                    // Ronda de preguntas con canción grupal
+     "Cadena de acuerdos",              // Fortalecimiento de empatía y convivencia
+     "Te miro te veo",                  // Expresión emocional con pelotas
+   ];
+
    PROHIBITED DYNAMICS:
-   - NO lluvia de ideas
-   - NO discusiones abiertas sin estructura
-   - NO actividades estáticas/sentados
-   
-   PREFERRED ALTERNATIVES:
-   - Representación mímica de conceptos
-   - Recorridos por estaciones de aprendizaje
-   - Juegos de rol educativos
-   - Creación de mapas humanos
-   - Dramatizaciones de situaciones
-   - Carreras de relevos conceptuales
-   - Construcción colaborativa
+   - NO brainstorming
+   - NO unstructured open discussions
+   - NO static/seated activities
    
    SELECTION RULES:
-   - Use EXCLUSIVELY "Mis 500 dinámicas grupales para el trabajo escolar"
-   - Must involve physical movement
-   - Must have clear structure and rules
-   - Must be engaging and participative
+   1. Select a dynamic from REFERENCE_DYNAMICS that best fits the topic
+   2. If none matches exactly, combine or adapt one while maintaining:
+      - Physical movement
+      - Group interaction
+      - Creativity
+      - Clear structure
+   3. The dynamic must:
+      - Involve physical movement
+      - Have clear rules and structure
+      - Be participative and dynamic
+      - Keep the original dynamic's spirit
 
 3. TIME DISTRIBUTION:
    START: 20% of total time
@@ -85,10 +119,10 @@ Follow these steps in order:
    - Do NOT repeat information that belongs in other columns
    
    BAD example:
-   "Los participantes realizarán una actividad durante 10 minutos usando papeles y lápices..."
+   "Participants will do an activity for 10 minutes using papers and pencils..."
    
    GOOD example:
-   "Los participantes formarán un círculo y cada uno representará un concepto mediante mímica. El resto intentará adivinar el concepto representado."
+   "Participants will form a circle and each one will represent a concept through mime. The rest will try to guess the concept represented."
 
 6. VERIFICATION CRITERIA:
    Activities must demonstrate participants:
